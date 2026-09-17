@@ -76,5 +76,69 @@ console.log(checkValue(-3));
 console.log(checkValue(0)); 
 
 
+// Problem 6: Reverse a String  [Easy]
+// Description: Write a function reverseString(str) that returns the reverse of a given string.
+// Example:
+// Input: 'hello'   → Output: 'olleh'Input: 'world'   → Output: 'dlrow'
+// Hint: Use split(''), reverse(), and join('').
+
+const reverseString = (str) => {
+    return str.split('').reverse().join('')
+}
+console.log(reverseString('hello'));
+console.log(reverseString('world'));
+
+// Problem 7: Count Vowels in a String  [Easy]
+// Description: Write a function countVowels(str) that counts and returns the number of vowels (a, e, i, o, u) in a string.
+// Example:
+// Input: 'hello'   → Output: 2Input: 'javascript' → Output: 3
+// Hint: Use a loop or match() with a regular expression.
+
+    const countVowels = (str) => {
+        const vowels = str.match(/[aeiou]/gi);
+        return vowels ? vowels.length : 0;
+    }
+    console.log(countVowels('hello'));
 
 
+
+//     Problem 8: Check Palindrome  [Easy]
+// Description: Write a function isPalindrome(str) that returns true if the string reads the same forwards and backwards.
+// Example:
+// Input: 'racecar'  → Output: trueInput: 'hello'    → Output: false
+// Hint: Compare the string to its reverse.
+
+    const compare = (str) => {
+        const first = str
+        const second = str.split('').reverse().join('')
+        if (first === second) {
+            return "Palindrome"
+        } else {
+            return "Not Palindrome"
+        }
+    }
+    console.log(compare('racecar'));
+    console.log(compare('hello'));
+
+// Problem 9: Capitalize First Letter of Each Word  [Easy]
+// Description: Write a function titleCase(str) that capitalizes the first letter of every word in a string.
+// Example:
+// Input: 'hello world'  → Output: 'Hello World'
+// Hint: Use split(' '), map(), and join(' ').
+
+const titleCase = (str) => {
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+console.log(titleCase('hello world'));
+
+
+// Problem 10: Count Occurrences of a Character  [Easy]
+// Description: Write a function countChar(str, char) that returns how many times a character appears in a string.
+// Example:
+// Input: 'banana', 'a'  → Output: 3
+// Hint: Use split(char).length - 1 or a loop.
+
+const countChar = (str, char) => {
+    return str.split(char).length - 1;
+}
+console.log(countChar('banana', 'a'));
